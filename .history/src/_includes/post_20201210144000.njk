@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+<article>
+{{ content | safe }}
+</article>
+
+<hr>
+
+<aside>
+    {% for fact in facts | randomItem %}
+    <p>{{ fact }}</p>
+    {% endfor %}
+</aside>

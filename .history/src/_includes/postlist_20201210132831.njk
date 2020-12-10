@@ -1,0 +1,13 @@
+<ul>
+  {% for post in collections.posts %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<!--
+  If you're wondering what those curly braces and percent signs are about, what we've done is created a for loop using the Liquid templating language (which happens to share this basic curly brace syntax with Nunjucks templating language).
+  -->
+
+  <!--
+  We've defined a local variable of post to be the reference to an individual item in collections.posts. Thanks to adding our tag of posts, this collection was created by 11ty and is available throughout all site files.
+  -->

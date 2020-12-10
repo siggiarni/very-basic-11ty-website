@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+
+{#
+Next, we'll create a dedicated layout to display our blog posts.
+in the _includes directory, create post.njk with the following content:
+
+We'll then use an Eleventy concept called "layout chaining". This will allow us to designate that the post layout should also inherit the base layout.
+#}
+
+<article>
+  {{ content | safe }}
+</article>
+
+<hr>
+
+<aside>
+    {% for fact in facts | randomItem %}
+        <p>{{ fact }}</p>
+    {% endfor %}
+</aside>
